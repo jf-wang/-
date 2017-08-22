@@ -1,0 +1,28 @@
+@media only screen and (min-width: 960px) and (max-width: 1500px) {
+.header {height: 73px;}
+.logo_img {margin: 10px 20px 0 280px;}
+.logo_text {margin-top: 40px;}
+.content{/*身体*/height: 380px;}
+.con_left{/*大logo*/margin: 49px 0 0 280px; height: 330px;width: 492px;background-size: 492px 330px;}
+.con_right{/*表单*/width: 245px;height: 273px;}
+.form{ width: 189px;height: 238px;margin: 13px 0 0 20px;}
+.denglu{margin-bottom: 10px;}
+#userName{width:160px; }
+#passWord{width:160px; position: relative;top:-30px;}
+.pwd{top:-60px;}
+.code{width:100px; font-size: 25px; float: left;margin-right: 10px;}
+.yanzhngma{position: relative;top:-50px;}
+.yzm{float: left;margin-top: 10px;}
+.input{width: 87px}
+.loginButton{width: 200px;position: relative;top:-70px;}
+.top{height:35px; }
+.footer{margin-left: 280px;width:768px;}
+.foots{margin-top: -45px;}
+.bottom span {height: 30px;line-height: 30px;}
+.bottom img {margin-top: 5px;}
+.foots_span span {margin-top: -25px;}
+.nocode{
+	    width: 109px;
+	    height: 42px;
+}
+}    

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>信号类型</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./xinghao_1500.css">
+    <link rel="stylesheet" href="./xinghao_900.css">
+    <link rel="stylesheet" href="../../css/spectrum.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head_left">
+            <span>信号类型</span>
+            <span class="maohao">:</span>
+            <span class="number"></span>
+            <span class="head_btn" data-toggle="modal" data-target="#myModal_xinhaoleixing">新增信号类型</span>
+        </div>
+
+    </div>
+    <div class="content">
+        <table class="table1" border="0">
+            <thead>
+                <th>编号</th>
+                <th>信号类型名称</th>
+                <th>项目</th>
+                <th>单位</th>
+                <th>修正（k）</th>
+                <th>修正（b）</th>
+                <th>备注</th>
+                <th>背景颜色</th>
+                <th>操作</th>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <!----------------------------------------------------------------------新增信号类型-->
+    <div class="modal fade" id="myModal_xinhaoleixing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">新增信号类型</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:56px">编号</span><span class="maohao">:</span>
+                            <input type="text" class="xinjian_code">
+                        </div>
+                        <div class="flex-item">
+                            <span>信号类型名称</span><span class="maohao">:</span>
+                            <input type="text" class="xinjian_name">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">项目</span><span class="maohao">:</span>
+                            <select name="" class="xinjian_xmname">
+                                <option value="0">请选择</option>
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">单位</span><span class="maohao">:</span>
+                            <input type="text" class="xinghao_danwei">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:28px">里程上限</span><span class="maohao">:</span>
+                            <input type="text" class="licheng_top" style="width:100px">
+                            <span style="margin-left:23px">里程下限</span><span class="maohao">:</span>
+                            <input type="text" class="lichneg_bottom" style="width:100px">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">模拟量上限</span><span class="maohao">:</span>
+                            <input type="text" class="monilaing_top" style="width:100px">
+                            <span style="margin-left:9px">模拟量下限</span><span class="maohao">:</span>
+                            <input type="text" class="monilaing_bottom" style="width:100px">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:21px">修正（k）</span><span class="maohao">:</span>
+                            <input type="text" class="xiuzheng_k">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:21px">修正（b）</span><span class="maohao">:</span>
+                            <input type="text" class="xiuzheng_b">
+                        </div>
+
+                        <div class="flex-item">
+                            <span style="margin-left:56px">备注</span><span class="maohao">:</span>
+                            <input type="text" class="xinjina_bz">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">背景色</span><span class="maohao">:</span>
+                            <input id="fontColorc6" type="text" maxlength="25" />
+                            <input type="text" class="rgb">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="xinjian" data-dismiss="modal">添加</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------编辑-->
+    <div class="modal fade" id="myModal_xinhao_bianji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">信号类型设置</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:56px">编号</span><span class="maohao">:</span>
+                            <input type="text" class="shezhi_bianhao">
+                        </div>
+                        <div class="flex-item">
+                            <span>信号类型名称</span><span class="maohao">:</span>
+                            <input type="text" class="shezhi_name">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">项目</span><span class="maohao">:</span>
+                            <select name="" class="shezhi_xiangmu">
+                                <option value="#1">请选择</option>
+                                <!-- <option value="#2">设备#2</option>
+                                <option value="#3">设备#3</option>
+                                <option value="#4">设备#4</option> -->
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">单位</span><span class="maohao">:</span>
+                            <input type="text" class="shezhi_danwei">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:28px">里程上限</span><span class="maohao">:</span>
+                            <input type="text" class="licheng_top" style="width:100px">
+                            <span style="margin-left:23px">里程下限</span><span class="maohao">:</span>
+                            <input type="text" class="lichneg_bottom" style="width:100px">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">模拟量上限</span><span class="maohao">:</span>
+                            <input type="text" class="monilaing_top" style="width:100px">
+                            <span style="margin-left:9px">模拟量下限</span><span class="maohao">:</span>
+                            <input type="text" class="monilaing_bottom" style="width:100px">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:21px">修正（k）</span><span class="maohao">:</span>
+                            <input type="text" class="xiuzheng_k">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:21px">修正（b）</span><span class="maohao">:</span>
+                            <input type="text" class="xiuzheng_b">
+                        </div>
+
+                        <div class="flex-item">
+                            <span style="margin-left:56px">备注</span><span class="maohao">:</span>
+                            <input type="text" class="shezhi_beizhu">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">背景色</span><span class="maohao">:</span>
+                            <input class="background_shezhi" id="background_shezhi">
+                            <input type="text" class="rgb">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia_bianji" data-dismiss="modal">保存</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<script src="../../js/fenye.js"></script>
+<script src="./xinhao.js"></script>
+<script src="../../js/spectrum.js"></script>
+<script>
+    $("#fontColorc6").spectrum({
+        color: "#000000",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function() {
+
+        },
+        show: function() {
+
+        },
+        beforeShow: function() {
+
+        },
+        hide: function(color) {
+            var xiancolor6 = color.toHexString();
+            xiancolors6 = xiancolor6;
+            $(".rgb").val(xiancolor6)
+        },
+        change: function() {
+
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+                "rgb(204, 204, 204)", "rgb(217, 217, 217)", "rgb(255, 255, 255)"
+            ],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+                "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"
+            ],
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)",
+                "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)",
+                "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)",
+                "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)",
+                "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)",
+                "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+                "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+                "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+                "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)",
+                "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"
+            ]
+        ]
+    });
+</script>
+<script>
+    $("#background_shezhi").spectrum({
+        color: "#000000",
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: true,
+        maxSelectionSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        move: function() {
+
+        },
+        show: function() {
+
+        },
+        beforeShow: function() {
+
+        },
+        hide: function(color) {
+            var xiancolor6 = color.toHexString();
+            xiancolors6 = xiancolor6;
+            $(".rgb").val(xiancolor6)
+        },
+        change: function() {
+
+        },
+        palette: [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+                "rgb(204, 204, 204)", "rgb(217, 217, 217)", "rgb(255, 255, 255)"
+            ],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+                "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"
+            ],
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)",
+                "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)",
+                "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)",
+                "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)",
+                "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)",
+                "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+                "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+                "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+                "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)",
+                "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"
+            ]
+        ]
+    });
+</script>
+<script>
+    $(".head_btn").click(function() {
+        window.parent.zhezhao();
+    });
+    $(".tainjia_bianji,.xinjian,.quxiao_bianji").click(function() {
+        window.parent.QXzhezhao();
+    });
+</script>
+
+</html>

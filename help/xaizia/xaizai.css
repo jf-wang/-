@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+body {
+    margin: 20px;
+    padding: 0;
+    background: rgb(245, 245, 245);
+}
+
+.flex-item {
+    margin-bottom: 40px;
+    width: 400px;
+    height: 40px;
+}
+
+.first {
+    font-size: 16px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.second {
+    font-size: 14px;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+}
+
+.third {
+    font-size: 12px;
+    color: rgb(190, 190, 190);
+    /* float: left; */
+    width: 140px;
+}

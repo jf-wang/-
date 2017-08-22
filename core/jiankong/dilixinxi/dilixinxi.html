@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地图全览</title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1ec1d0805ca2828452514dbe1d14c7fc"></script>
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dilixinxi_1500.css">
+    <link rel="stylesheet" href="./dilixinxi_900.css">
+</head>
+<body>
+    <div class="heade">
+        <span class="first">部门</span><span class="maohao">:</span>
+        <select class="bumen">
+            <option value="">水果基地</option>
+            <option value="2015">2015年 </option>
+            <option value="2016">2016年</option>
+            <option value="2017">2017年</option>
+            <option value="2018">2018年</option>
+            <option value="2019">2019年</option>
+            <option value="2020">2020年</option>
+        </select>
+        <span>设备名称</span><span class="maohao">:</span>
+        <select class="shebeimingcheng">
+            <option value="">GPRS模块 </option>
+            <option value="2015">2015年 </option>
+            <option value="2016">2016年</option>
+            <option value="2017">2017年</option>
+            <option value="2018">2018年</option>
+            <option value="2019">2019年</option>
+            <option value="2020">2020年</option>
+        </select>
+        <span>时间</span><span class="maohao">:</span>
+        <input class="datainp" id="dateinfo3" type="text" placeholder="请选择"  readonly>
+        <div class="right">
+            <span>查询位置</span><span class="maohao">:</span>
+            <select class="chaxunweizhi">
+                <option value="">全部 </option>
+                <option value="2015">2015年 </option>
+                <option value="2016">2016年</option>
+                <option value="2017">2017年</option>
+                <option value="2018">2018年</option>
+                <option value="2019">2019年</option>
+                <option value="2020">2020年</option>
+            </select>
+        </div>
+        <button type="button" class="btn">查询轨迹</button>
+    </div>
+
+   <div class="map">
+        <div id="allmap"></div>
+   </div>
+   
+</body>
+<script src="../../../js/jquery-3.1.1.min.js"></script>
+<script src="http://www.my97.net/dp/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+ var map = new BMap.Map("allmap"); // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.429227, 39.828894), 8); //默认的默认位置和级别           
+        map.addControl(new BMap.NavigationControl()); // 添加平移缩放控件
+        map.addControl(new BMap.ScaleControl()); // 添加比例尺控件
+        map.addControl(new BMap.OverviewMapControl()); //添加缩略地图控件
+        map.enableScrollWheelZoom(); //启用滚轮放大缩小
+        map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+
+
+  putJKD();          
+        //添加监控点
+        function putJKD() {
+            $.ajax({
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                url: "http://192.168.5.111:99/api/KWD/GetDevices",
+                dataType: "json",
+                success: function (e) {
+                    //alert(e);
+                    var ds = JSON.parse(e);
+                    for (var i = 0; i < ds.Table.length; i++) {
+                        //alert(ds[i].id);
+                        var lng = ds.Table[i].jwd.split(',')[0];
+                        var lat = ds.Table[i].jwd.split(',')[1];
+                        var pt = new BMap.Point(lng, lat);
+                        var marker = new BMap.Marker(pt); //创建标注
+                        map.addOverlay(marker); // 将标注添加到地图中                           
+                        var label = new BMap.Label(ds.Table[i].name, { offset: new BMap.Size(20, -10) });
+                        marker.setLabel(label);
+                    }
+                }
+            });
+        }
+
+
+
+        
+    $(".btn").click(function(){
+        var shebeiname = $(".shebeiname").val();//设备名
+        var region = $(".region").val();//年份
+        var bdx =region+"-01-01"+" "+"00:00:00";
+        var edx =region+"-12-31"+" "+"23:59:59";
+        // var regions = bdx+","+edx;
+        var add = "";
+        //  console.log(bdx)
+        if(shebeiname==""&&region!=""){
+            add = {bdx:bdx,edx:edx};
+        }else if(shebeiname!=""&&region==""){
+            add = {name:shebeiname};
+        }else if(shebeiname!=""&&region!=""){
+            add={name:shebeiname,bdx:bdx,edx:edx}
+        }else if(shebeiname==""&&region==""){
+            	map.clearOverlays();
+            putJKD();   
+        }
+    
+            $.ajax({
+        type: "POST",
+        contentType: "application/x-www-form-urlencoded",
+        url: "http://192.168.5.111:99/api/KWD/GetDeviceJwds",
+        data:add,
+        dataType: "json",
+        success: function (result) {
+            // alert(result)
+            if(result==""){
+                alert("没有数据");
+                map.clearOverlays();
+            }else{
+            var ds = JSON.parse(result);
+            // console.log(ds);
+            	map.clearOverlays();
+            for (var i = 0; i < ds.Table.length; i++) {
+                var lng = ds.Table[i].jwd.split(',')[0];
+                var lat = ds.Table[i].jwd.split(',')[1];
+                var pt = new BMap.Point(lng, lat);
+                var marker = new BMap.Marker(pt); //创建标注
+                map.removeOverlay();  
+                map.addOverlay(marker); // 将标注添加到地图中 
+                // map.removeOverlay()                        
+                var label = new BMap.Label(ds.Table[i].name, { offset: new BMap.Size(20, -10) });
+                marker.setLabel(label);
+            }
+              }
+        },
+         error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("请求失败");
+                }
+    });
+    })
+        //添加监控点
+    // $.ajax({
+    //     type: "POST",
+    //     contentType: "application/x-www-form-urlencoded",
+    //     url: "http://192.168.5.48:99/api/KWD/GetDeviceInfos",
+    //     dataType: "json",
+    //     success: function (e) {
+    //         var ds = JSON.parse(e);
+    //         console.log(ds);
+    //         for (var i = 0; i < ds.Table.length; i++) {
+    //             //alert(ds[i].id);
+    //             var lng = ds.Table[i].jwd.split(',')[0];
+    //             var lat = ds.Table[i].jwd.split(',')[1];
+    //             var pt = new BMap.Point(lng, lat);
+    //             var marker = new BMap.Marker(pt); //创建标注
+    //             map.addOverlay(marker); // 将标注添加到地图中 
+    //             // map.removeOverlay(marker)                        
+    //             var label = new BMap.Label(ds.Table[i].code, { offset: new BMap.Size(20, -10) });
+    //             marker.setLabel(label);
+    //         }
+    //     }
+    // });
+
+
+    </script>
+
+</html>

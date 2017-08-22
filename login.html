@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页</title>
+    <link rel="stylesheet" href="./css/login_1500.css">
+    <link rel="stylesheet" href="./css/login_900.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_img">
+            <img src="./imges/logo.png" alt="">
+        </div>
+        <div class="logo_text">
+            <img src="./imges/logo_text.png" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="con_left">
+
+        </div>
+        <div class="con_right">
+            <div class="form">
+                <ul>
+                    <li>
+                        <div class="denglu"></div>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="text" id="userName" placeholder="用户名">
+                            <div class="user"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="password" id="passWord" placeholder="密码">
+                            <div class="pwd"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="yanzhngma">
+                            <span id="code" class="nocode">验证码</span>
+                            <input type="text" class="input" />
+                        </div>
+                    </li>
+                    <li>
+                        <input class="loginButton" type="button" value="登录" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="us">
+            <div class="top">
+                <span>联系我们</span>
+            </div>
+            <div class="bottom">
+                <span>邮箱：zeiot@zeiot.cn<br />Q&nbsp;Q&nbsp;:273149426<br />电话：0315-5065606</span>
+            </div>
+        </div>
+        <div class="gz">
+            <div class="top">
+                <span>关注我们</span>
+            </div>
+            <div class="bottom">
+                <img class="bottomimg" src="./imges/ER_weima.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="foots">
+        <div class="foots_span"><span>中易云（唐山）物联网有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.zeiot.cn</span></div>
+    </div>
+</body>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/YiYunWuLian_Url.js"></script>
+<script>
+    $(".yzm").click(function() {
+        location.reload(); //刷新当前页面
+    })
+    var code = "";
+    var random = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+    var codeLength = 4;
+
+    function codes() {
+        code = ""
+        for (var i = 0; i < 4; i++) { //循环codeLength 我设置的4就是循环4次
+            var index = Math.floor(Math.random() * 26); //设置随机数范围,这设置为0 ~ 36
+            code += random[index]; //字符串拼接 将每次随机的字符 进行拼接
+        }
+        $("#code").html(code);
+        $("#code").css('background', "rgb(13,114,200)");
+        $("#code").css('color', "white");
+    }
+    codes()
+
+    $("#code").on('click', codes)
+    var nuber = 0;
+    $(".loginButton").click(function() {
+        var user = $("#userName").val();
+        var passwork = $("#passWord").val();
+        $.ajax({
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded",
+            url: "***",
+            data: {
+                uid: user,
+                pwd: passwork
+            },
+            dataType: "json",
+            success: function(result) {
+                console.log(result)
+                if (result == "") {
+                    alert("账户或密码不正确,请重新输入");
+                    localStorage.setItem("verification", nuber++);
+                } else if ($(".input").val() == code && code != 9999 && result != "") {
+                    var obj = JSON.parse(result); //解析
+                    console.log(obj)
+                    localStorage.setItem("ZEIOT-msg", result);
+                    localStorage.setItem("userName", obj.Table[0].name);
+                    localStorage.setItem("passWord", obj.Table[0].pwd);
+                    localStorage.setItem("xmid", obj.Table[0].xmid);
+                    localStorage.setItem("lastname", obj.Table[0].xmid);
+                    localStorage.setItem("id", obj.Table[0].id);
+                    localStorage.setItem("xmname", obj.Table[0].xmname);
+                    localStorage.setItem("xmids", obj.Table[0].xmids);
+                    localStorage.setItem("grade", obj.Table[0].grade);
+                    localStorage.setItem("bmid", obj.Table[0].bmid);
+                    localStorage.setItem("bmids", obj.Table[0].bmids);
+                    localStorage.setItem("homepage", obj.Table[0].homepage);
+                    if (obj.Table[0].grade == 0) {
+                        window.open("./index.html", "_self");
+                    } else {
+                        window.open("./zhao/index.html", "_self");
+                    }
+                } else {
+                    alert("验证码输入错误!");
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("数据请求失败,或当前网络不可用");
+            }
+        });
+    })
+</script>
+<script type="text/javascript" language=JavaScript charset="UTF-8">
+    document.onkeydown = function(event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if (e && e.keyCode == 13) { // enter 键
+            var user = $("#userName").val();
+            var passwork = $("#passWord").val();
+            $.ajax({
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                url: "***",
+                data: {
+                    uid: user,
+                    pwd: passwork
+                },
+                dataType: "json",
+                success: function(result) {
+                    console.log(result)
+                    if (result == "") {
+                        alert("账户或密码不正确,请重新输入");
+                        localStorage.setItem("verification", nuber++);
+                    } else if ($(".input").val() == code && code != 9999 && result != "") {
+                        var obj = JSON.parse(result); //解析
+                        localStorage.setItem("ZEIOT-msg", result);
+                        localStorage.setItem("userName", obj.Table[0].name);
+                        localStorage.setItem("passWord", obj.Table[0].pwd);
+                        localStorage.setItem("xmid", obj.Table[0].xmid);
+                        localStorage.setItem("lastname", obj.Table[0].xmid);
+                        localStorage.setItem("id", obj.Table[0].id);
+                        localStorage.setItem("xmname", obj.Table[0].xmname);
+                        localStorage.setItem("xmids", obj.Table[0].xmids);
+                        localStorage.setItem("grade", obj.Table[0].grade);
+                        localStorage.setItem("bmid", obj.Table[0].bmid);
+                        localStorage.setItem("bmids", obj.Table[0].bmids);
+                        localStorage.setItem("homepage", obj.Table[0].homepage);
+                        if (obj.Table[0].grade == 0) {
+                            window.open("./index.html", "_self");
+                        } else {
+                            window.open("./zhao/index.html", "_self");
+                        }
+                    } else {
+                        alert("验证码输入错误!");
+                    }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("数据请求失败,或当前网络不可用");
+                }
+            });
+
+        }
+    };
+</script>
+
+</html>

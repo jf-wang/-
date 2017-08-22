@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+body {
+    margin: 30px 0px 0 5px;
+    padding: 0;
+    background: rgb(245, 245, 245);
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.head_left {
+    float: left;
+}
+
+.head_con {
+    float: left;
+}
+
+.head_right {
+    float: left;
+}
+
+.head_input {
+    color: rgb(170, 170, 170);
+    border-radius: 15px;
+    width: 200px;
+    height: 30px;
+    border: 1px solid rgb(170, 170, 170);
+    padding-left: 40px;
+    outline: none;
+    font-size: 16px;
+}
+
+.fdj {
+    background: url("../../imges/search.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    display: inline-block;
+    position: relative;
+    left: 37px;
+    top: 2px;
+}
+
+.head_btn {
+    background: rgb(1, 93, 178);
+    color: white;
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.maohao {
+    margin: 0 5px 0 5px;
+}
+
+.quanxian {
+    width: 200px;
+    height: 30px;
+}
+
+.table1 {
+    margin-left: 5px;
+}
+
+.table1 th {
+    background: rgb(204, 204, 204);
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    border-right: 1px solid rgb(170, 170, 170);
+    border-top: 1px solid rgb(170, 170, 170);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.table1 td {
+    text-align: center;
+    border-right: 1px solid rgb(170, 170, 170);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    height: 40px;
+}
+
+.table1 th:nth-child(1),
+.table1 td:nth-child(1) {
+    border-left: 1px solid rgb(170, 170, 170);
+    width: 120px;
+}
+
+.table1 th:nth-child(2),
+.table1 td:nth-child(2) {
+    width: 250px;
+}
+
+.table1 th:nth-child(3),
+.table1 td:nth-child(3) {
+    width: 250px;
+}
+
+.table1 th:nth-child(4),
+.table1 td:nth-child(4) {
+    width: 250px;
+}
+
+.table1 th:nth-child(5),
+.table1 td:nth-child(5) {
+    width: 120px;
+}
+
+.table1 th:nth-child(6),
+.table1 td:nth-child(6) {
+    width: 120px;
+}
+
+.biaohao {
+    width: 200px;
+    height: 30px;
+}
+
+.zaixianxiangxi {
+    color: rgb(1, 93, 178);
+    cursor: pointer;
+}
+
+.tainjia,
+.tainjia_bianji,
+.tainjia_gaoji {
+    width: 60px;
+    height: 25px;
+    background: rgb(1, 93, 178);
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    position: relative;
+    left: -185px;
+    cursor: pointer;
+}
+
+.quxiao,
+.quxiao_bianji,
+.quxiao_gaoji {
+    width: 60px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid rgb(170, 170, 170);
+    line-height: 25px;
+    position: relative;
+    left: -150px;
+    cursor: pointer;
+}
+
+.flex-item {
+    margin-bottom: 10px;
+}
+
+#dateinfo,
+#dateinfo2 {
+    width: 200px;
+    height: 30px;
+}
+
+.id {
+    display: none
+}
+
+.date_selector,
+.date_selector * {
+    width: auto;
+    height: auto;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+}
+
+.date_selector {
+    background: #fbfbfb;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 100000;
+    display: none;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #aaa;
+    box-shadow: 0 2px 2px #ccc;
+    width: 200px;
+}
+
+.date_selector_ieframe {
+    position: absolute;
+    z-index: 99999;
+    display: none;
+}
+
+.date_selector .nav {
+    width: 170px;
+}
+
+.date_selector .nav p {
+    clear: none;
+}
+
+.date_selector .month_nav,
+.date_selector .year_nav {
+    margin: 0 0 3px 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.date_selector .month_nav {
+    float: left;
+    width: 55%;
+}
+
+.date_selector .year_nav {
+    float: right;
+    width: 42%;
+    margin-right: -8px;
+}
+
+.date_selector .month_name,
+.date_selector .year_name {
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.date_selector .button {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #5985c7;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.date_selector .button:hover,
+.date_selector .button.hover {
+    background: #5985c7;
+    color: #fff;
+    cursor: pointer;
+    border-color: #3a930d;
+}
+
+.date_selector .prev {
+    left: 0;
+}
+
+.date_selector .next {
+    right: 0;
+}
+
+.date_selector table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    clear: both;
+    margin: 0;
+    width: 180px;
+}
+
+.date_selector th,
+.date_selector td {
+    width: 2.5em;
+    height: 2em;
+    padding: 0 !important;
+    text-align: center !important;
+    color: #666;
+    font-weight: normal;
+}
+
+.date_selector th {
+    font-size: 12px;
+}
+
+.date_selector td {
+    border: 1px solid #f1f1f1;
+    line-height: 2em;
+    text-align: center;
+    white-space: nowrap;
+    color: #5985c7;
+    background: #fff;
+}
+
+.date_selector td.today {
+    background: #eee;
+}
+
+.date_selector td.unselected_month {
+    color: #ccc;
+}
+
+.date_selector td.selectable_day {
+    cursor: pointer;
+}
+
+.date_selector td.selected {
+    background: #2b579a;
+    color: #fff;
+    font-weight: bold;
+}
+
+.date_selector td.selectable_day:hover,
+.date_selector td.selectable_day.hover {
+    background: #5985c7;
+    color: #fff;
+}
+
+#pageStyle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #CCC;
+    line-height: 32px;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#pageStyle:hover {
+    background-color: #CCC;
+}
+
+#pageStyle .active {
+    background-color: #0CF;
+    color: #ffffff;
+}
+
+tbody tr:hover {
+    background: rgb(245, 245, 245);
+}
+
+tbody tr {
+    background: white;
+}

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+body {
+    margin: 30px 0px 0 5px;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+}
+
+.head_left {
+    float: left;
+}
+
+.head_right {
+    float: right;
+    margin-right: 20px;
+    margin-top: -10px;
+}
+
+.head_input {
+    /* color: rgb(245, 245, 245); */
+    border-radius: 15px;
+    width: 158px;
+    height: 28px;
+    border: 1px solid rgb(170, 170, 170);
+    padding-left: 40px;
+    outline: none;
+    font-size: 14px;
+}
+
+.fdj {
+    background: url("../../imges/search.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    display: inline-block;
+    position: relative;
+    left: 37px;
+    top: 5px;
+}
+
+.bor {
+    width: 300px;
+    height: 178px;
+}
+
+.big_list li {
+    float: left;
+    margin: 0 30px 30px 0;
+}
+
+.big_list li:nth-child(5) {
+    float: left;
+    margin: 0 10px 30px 0;
+}
+
+.list_head {
+    height: 39px;
+    width: 100%;
+    background: rgb(204, 204, 204)
+}
+
+.list_head span {
+    font-size: 18px;
+    margin: 10px 0 0 25px;
+    display: inline-block;
+    color: black;
+}
+
+.list_con {
+    width: 100%;
+    height: 110px;
+    background: white;
+}
+
+.list_logo {
+    background: url("../../imges/list_logo.png") no-repeat;
+    width: 90px;
+    height: 90px;
+    background-size: 90px 90px;
+    margin: 10px 15px 0 20px;
+    float: left;
+    border-radius: 50%;
+}
+
+.list_div {
+    margin: 10px 0 0 0;
+    width: 175px;
+    height: 85px;
+    float: left
+}
+
+.list_bj li {
+    margin: 0 0 14px 0;
+    font-size: 14px;
+    float: none;
+    color: black;
+}
+
+.list_foot {
+    color: rgb(255, 136, 32);
+    width: 100%;
+    height: 28px;
+    background: white
+}
+
+.foot_img {
+    background: url("../../imges/xiaoxi.png") no-repeat;
+    width: 20px;
+    height: 16px;
+    background-size: 20px 16px;
+    float: left;
+    margin: 5px 2px 0 2px;
+}
+
+.yue {
+    font-size: 12px;
+}
+
+.daoqi {
+    font-size: 12px;
+}
+
+.bj_time {
+    font-size: 14px;
+}
+
+.homepage {
+    display: none;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据费用</title>
+    <link rel="stylesheet" href="./shujufeiyong.css">
+</head>
+
+<body>
+    <div style="display:flex; flex-direction:column;">
+        <div class="flex-item">
+            <span>收费标准</span>
+            <span class="maohao">:</span>
+            <input type="text" class="hispay" readonly>
+            <span>元/月</span>
+        </div>
+        <div class="flex-item">
+            <span>数据期限</span>
+            <span class="maohao">:</span>
+            <input type="text" class="hissertimes" readonly>
+        </div>
+        <div class="flex-item">
+            <span>账户余额</span>
+            <span class="maohao">:</span>
+            <input type="text" class="yue" readonly>
+            <span>元</span>
+        </div>
+        <div class="flex-item">
+            <span>数据总量</span>
+            <span class="maohao">:</span>
+            <input type="text" class="hiszs" readonly>
+            <span>条</span>
+        </div>
+        <div class="flex-item">
+            <span>数据存储间隔</span>
+            <span class="maohao">:</span>
+            <select class="xiangmushuaxuan">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <span>分钟</span>
+            <span class="xiuzheng">修改</span>
+        </div>
+        <div class="flex-item">
+            <span>续费</span>
+            <span class="maohao">:</span>
+            <select class="xiangmuxufei">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <span>个月</span>
+            <span class="tijiao">提交</span>
+        </div>
+        <div class="flex-item" style="margin-top:50px;">
+            <span>注意事项</span>
+            <span class="maohao">:</span>
+        </div>
+        <div class="flex-item">
+            <span>1.新项目将提供一些免费储存空间，请及时充值确保数据的正常存储</span>
+        </div>
+        <div class="flex-item">
+            <span>2.您设置的数据存储间隔时间越短，存储的时间线越长，反之亦然</span>
+        </div>
+        <div class="flex-item">
+            <span>3.如果数据停止存储后进行充值，系统会在10分钟为您恢复正常储存</span>
+        </div>
+
+    </div>
+</body>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<script src="./shujufeiyong.js"></script>
+
+</html>

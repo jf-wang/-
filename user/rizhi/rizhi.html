@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>操作日志</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./rizhi_1500.css">
+    <link rel="stylesheet" href="./rizhi_900.css">
+    <link rel="stylesheet" href="../../css/jedate.css">
+</head>
+
+<body>
+    <div class="header">
+        <div id="show"></div>
+        <div class="head_con">
+            <span style="margin-left:10px;">选择时间</span><span class="maohao">:</span>
+            <input class="datainp" id="dateinfo3" type="text" placeholder="请选择" readonly>
+        </div>
+        <div class="head_right">
+            <span style="margin-left:10px;">结束时间</span><span class="maohao">:</span>
+            <input class="datainp" id="dateinfo4" type="text" placeholder="请选择" readonly>
+        </div>
+        <span class="chaxun">查询</span>
+    </div>
+    <div class="content" style="margin-left:10px;">
+        <table class="table1" border="0">
+            <tr>
+                <th>操作账号</th>
+                <th>操作时间</th>
+                <th>操作内容</th>
+            </tr>
+            <!-- <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>4</td>
+            </tr> -->
+        </table>
+    </div>
+</body>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/jedate.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<script src="../../js/fenye.js"></script>
+<script src="./rizhi.js"></script>
+
+</html>

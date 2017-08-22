@@ -1,0 +1,13 @@
+@media only screen and (min-width: 960px) and (max-width: 1500px) {
+.bor {width: 207px; height: 172px;}
+.list_logo{width: 84px;height: 63px;background-size: 84px 63px;margin: 10px 10px 0 10px; float: left}
+.list_head span{font-size: 16px;margin: 10px 0 0 15px;display: inline-block;}
+.list_head{ height: 35px;}
+.list_bj li {margin: 0px 0 8px 0; font-size: 12px;}
+.list_div{width:103px;float: left}
+.hj_nuber,.wqr_bj,.bj_time{font-size: 12px;}
+.list_con{height: 90px;}
+.yue,.daoqi{font-size: 12px;}
+.list_foot{height:45px;}
+.foot_img{margin-left: 0}
+}

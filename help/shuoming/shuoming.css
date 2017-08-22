@@ -1,0 +1,64 @@
+* {
+    list-style: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+    font-family: "微软雅黑";
+    background: rgb(245, 245, 245);
+    margin: 20px;
+}
+
+.tree {
+    color: black;
+    width: 200px;
+    /* margin: 100px auto; */
+    height: 780px;
+    overflow: scroll;
+    background: white;
+    float: left;
+}
+
+.tree li,
+.tree li>a,
+.tree li>span {
+    padding: 4pt;
+    border-radius: 4px;
+}
+
+.tree li a {
+    color: black;
+    text-decoration: none;
+    line-height: 20pt;
+    border-radius: 4px;
+}
+
+.tree li a:hover {
+    background-color: rgb(12, 102, 178);
+    color: #fff;
+}
+
+.active a {
+    color: #fff;
+}
+
+.tree li a.active:hover {
+    background-color: rgb(12, 102, 178);
+}
+
+.content {
+    width: 80%;
+    height: 755px;
+    float: left;
+    overflow: scroll;
+    background: white;
+    margin-left: 20px;
+}
+
+.content div {
+    width: 200px;
+    height: 600px;
+}

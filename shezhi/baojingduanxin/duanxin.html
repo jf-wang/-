@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>短信报警</title>
+    <link rel="stylesheet" href="./duanxin.css">
+</head>
+
+<body>
+    <div style="display:flex; flex-direction:column;">
+        <div class="flex-item">
+            <span>部门</span>
+            <span class="maohao">:</span>
+            <select class="bumenlist">
+            </select>
+        </div>
+        <div class="flex-item">
+            <span>短信</span>
+            <span class="maohao">:</span>
+            <select class="qiyongjinyong">
+                <option value="1">启用</option>
+                <option value="0">禁用</option>
+            </select>
+        </div>
+        <div class="flex-item">
+            <span>手机号码</span>
+            <span class="maohao1">:</span>
+            <input type="number" class="firstphont">
+        </div>
+        <div class="flex-item">
+            <input type="number" class="secondphont" style="margin-left:88px;">
+        </div>
+        <div class="flex-item">
+            <input type="number" class="thirdphont" style="margin-left:88px;">
+        </div>
+        <div class="flex-item">
+            <input type="number" class="fourthphont" style="margin-left:88px;">
+        </div>
+        <div class="flex-item">
+            <input type="number" class="fifthphont" style="margin-left:88px;">
+        </div>
+        <div class="flex-item">
+            <span class="baocun">保存</span>
+        </div>
+        <div class="flex-item">
+            <span>账户余额</span>
+            <span class="maohao">:</span>
+            <input type="text" class="hispay" readonly>
+            <span>元</span>
+        </div>
+        <div class="flex-item">
+            <span>短信余额</span>
+            <span class="maohao">:</span>
+            <input type="text" class="yue" readonly>
+            <span>元</span>
+        </div>
+        <div class="flex-item">
+            <span style="margin-left:29px;">转入</span>
+            <span class="maohao">:</span>
+            <input type="text" class="zhuanru">
+            <span>元</span>
+        </div>
+        <div class="flex-item">
+            <span class="tijiao">提交</span>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<script src="./daunxin.js"></script>
+
+</html>

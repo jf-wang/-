@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目管理</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./guanli_1500.css">
+    <link rel="stylesheet" href="./guanli_900.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head_left">
+            <span>当前项目数</span>
+            <span class="maohao">:</span>
+            <span class="number"></span>
+            <span class="head_btn" data-toggle="modal" data-target="#myModal_xinjian">新建项目</span>
+        </div>
+        <div class="head_right">
+            <span class="fdj"></span>
+            <input type="text" placeholder="请输入搜索内容" class="head_input">
+
+        </div>
+    </div>
+    <div class="content">
+        <table class="table1" border="0">
+            <thead>
+                <th>LOGO</th>
+                <th>编号</th>
+                <th>项目名称</th>
+                <th>数据间隔</th>
+                <th>数据总量</th>
+                <th>数据月费</th>
+                <th>数据期限</th>
+                <th>设备服务费</th>
+                <th>设备通道数</th>
+                <th>余额</th>
+                <th>短信余额</th>
+                <th>备注</th>
+                <th>短信报警</th>
+                <th>接受号码</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <!-------------------------------------编辑模态框-------------------------------------->
+    <div class="modal fade" id="myModal_bianji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:485px;height:640px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">项目详细信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:14px">项目编号</span><span class="maohao">:</span>
+                            <input type="text" class="bianhao_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">项目名称</span><span class="maohao">:</span>
+                            <input type="text" class="name_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">备注</span><span class="maohao">:</span>
+                            <input type="text" class="beizhu_bianji">
+                        </div>
+                        <div class="flex-item">
+                            <span>设备服务费</span><span class="maohao">:</span>
+                            <input type="text" class="fuwufei_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span>设备通道数</span><span class="maohao">:</span>
+                            <input type="text" class="tongdaoshu_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">数据间隔</span><span class="maohao">:</span>
+                            <input type="text" class="jiange_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">数据总量</span><span class="maohao">:</span>
+                            <input type="text" class="zongliang_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">数据月费</span><span class="maohao">:</span>
+                            <input type="text" class="yuefei_bianji">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">短信报警</span><span class="maohao">:</span>
+                            <!--<input type="text" class="duanxin_bianji">-->
+                            <select name="memberqueston" class="duanxin_bianji">
+                                <option value="0">请选择</option>
+                                <option value="1">启用</option>
+                                <option value="0">禁用</option>
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">接收号码</span><span class="maohao">:</span>
+                            <input type="text" class="haoma_bianji">
+                        </div>
+                        <input type="text" class="bianjiid">
+                        <div class="flex-item">
+                            <span style="margin-left:14px;color:red;">注：*号为必填项</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="baoxun_bianji" data-dismiss="modal">保存</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------新建模态框-------------------------------------->
+    <div class="modal fade" id="myModal_xinjian" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:485px;height:560px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">项目详细信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:14px">项目编号</span><span class="maohao">:</span>
+                            <input type="text" class="bianhao">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">项目名称</span><span class="maohao">:</span>
+                            <input type="text" class="name">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">备注</span><span class="maohao">:</span>
+                            <input type="text" class="beizhu">
+                        </div>
+                        <div class="flex-item">
+                            <span>设备服务费</span><span class="maohao">:</span>
+                            <input type="text" class="fuwufei">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span>设备通道数</span><span class="maohao">:</span>
+                            <input type="text" class="tongdaoshu">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">数据间隔</span><span class="maohao">:</span>
+                            <input type="text" class="jiange">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">数据总量</span><span class="maohao">:</span>
+                            <input type="text" class="zongliang">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">数据月费</span><span class="maohao">:</span>
+                            <input type="text" class="yuefei">
+                            <span class="xinhao">*</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">短信报警</span><span class="maohao">:</span>
+                            <input type="text" class="duanxin">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">接收号码</span><span class="maohao">:</span>
+                            <input type="text" class="haoma">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px;color:red;">注：*号为必填项</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia" data-dismiss="modal">添加</span>
+                    <span class="quxiao" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------高级模态框-------------------------------------->
+    <div class="modal fade" id="myModal_gaoji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:485px;height:560px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">项目详细信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 30px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:14px">项目编号</span><span class="maohao">:</span>
+                            <input type="text" class="bianhao_gaoji" readonly>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">项目名称</span><span class="maohao">:</span>
+                            <input type="text" class="name_gaoji" readonly>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">余额</span><span class="maohao">:</span>
+                            <input type="text" class="yue_gaoji" readonly>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">充值</span><span class="maohao">:</span>
+                            <input type="text" class="chongzhi">
+                            <span class="chongzhi_tijiao">提交</span>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px;float:left">项目logo</span><span class="maohao" style="float:left">:</span>
+                            <div class="shangchuanimg">
+                                <input type="file" name="file" id="fileUpload" onchange="imgPreview(this)" />
+                                <span style="color:red">*图片类型必须是jpg格式</span>
+                                <br>
+
+                                <img id="preview" />
+                            </div>
+                            <span class="logo_top" id="btnUploadFile">上传</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia_gaoji" data-dismiss="modal">确定</span>
+                    <span class="quxiao_gaoji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal_del" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:485px;height:560px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;"></h4>
+                </div>
+                <div class="modal-body" style="margin: 0 30px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <h4 style="margin-left:155px">是否确认删除</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="queding_del" data-dismiss="modal">确定</span>
+                    <span class="quxiao_del" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="../../js/jquery-1.11.0.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<!-- <script src="../../js/fenye.js"></script> -->
+<script src="./gunali.js"></script>
+<script src="./guanli_ok.js"></script>
+<script src="../../js/jquery.filtertable.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('table').filterTable({ // apply filterTable to all tables on this page
+            inputSelector: '#input-filter' // use the existing input instead of creating a new one
+        });
+    });
+</script>
+<script>
+    $(".head_btn").click(function() {
+        window.parent.zhezhao();
+    });
+    $(".quxiao_del,.queding_del,.quxiao_gaoji,.tainjia_gaoji,.quxiao,.tainjia,.quxiao_bianji").click(function() {
+        window.parent.QXzhezhao();
+    });
+    $(".baoxun_bianji").click(function() {
+        window.parent.QXzhezhao();
+    });
+</script>
+
+</html>

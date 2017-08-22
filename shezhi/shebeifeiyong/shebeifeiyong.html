@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设备费用</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./shebeifeiyong.css">
+</head>
+
+<body>
+    <div class="header">
+        <table class="table1" border="0">
+            <thead>
+                <th><input class="input" name="Fruit" type="checkbox" value="" title="" id="checkAll" /></th>
+                <th>编号</th>
+                <th>名称</th>
+                <th>部门</th>
+                <th>通道数</th>
+                <th>服务费</th>
+                <th>服务期限</th>
+                <th>备注</th>
+            </thead>
+            <tbody class="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="content">
+        <!-- <div class="con_left">
+            <span>收费标准</span>
+            <span class="maohao">:</span>
+            <input type="text">
+            <span>元/设备/月</span>
+        </div> -->
+        <div class="con_left">
+            <span>账户余额</span>
+            <span class="maohao">:</span>
+            <input type="text" class="zhanghuyue">
+            <span>元</span>
+        </div>
+        <div class="con_left">
+            <span>设备续费</span>
+            <span class="maohao">:</span>
+            <select class="xiangmushuaxuan">
+                <option value="1">1 </option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <span>个月</span>
+            <span class="head_btn">提交</span>
+        </div>
+    </div>
+    <div class="footer">
+        <div>注意事项</div>
+        <div style="display:flex; flex-direction:column;">
+            <div class="flex-item">
+                <div>1.新增的设备试用期为3天，试用期不收取服务费，请及时充值确保设备的正常使用。</div>
+            </div>
+            <div class="flex-item">
+                <div>2.新增的设备请确保上报的寄存器数量小于通道数，否则设备无法正常使用。</div>
+            </div>
+            <div class="flex-item">
+                <div>3.如果设备试用期限超时停用后进行充值，系统会在10分钟恢复设备的正常状态</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<script src="../../js/fenye.js"></script>
+<script src="./shebeifeiyong.js"></script>
+
+</html>

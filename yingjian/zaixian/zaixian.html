@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线设备</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./zaixian_1500.css">
+    <link rel="stylesheet" href="./zaixian_900.css">
+    <link rel="stylesheet" href="../../css/jedate.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="head_left">
+            <span>在线设备</span><span class="maohao">:</span><span class="number"></span>
+            <span style="margin-left:20px;">编号</span><span class="maohao">:</span><input type="text" class="biaohao">
+        </div>
+    </div>
+    <div class="content">
+        <table class="table1" border="0">
+            <thead>
+                <th>编号</th>
+                <th>地址</th>
+                <th>端口</th>
+                <th>更新时间</th>
+                <th>字节数</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td><span data-toggle="modal" data-target="#myModal_zaixianxiangxi" class="zaixianxiangxi">详细</span></td>
+            </tr> -->
+        </table>
+    </div>
+
+</body>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<!-- <script src="../../js/fenye.js"></script> -->
+<script src="../../js/jedate.js"></script>
+<script src="./zaixian.js"></script>
+
+<script>
+    jeDate({
+        dateCell: "#dateinfo",
+        format: "YYYY-MM-DD",
+        isinitVal: true,
+        isTime: true, //isClear:false,
+        minDate: "2014-09-19 00:00:00",
+        okfun: function(val) {
+            alert(val)
+        }
+    })
+    jeDate({
+        dateCell: "#dateinfo2",
+        format: "YYYY-MM-DD",
+        isinitVal: true,
+        isTime: true, //isClear:false,
+        minDate: "2014-09-19 00:00:00",
+        okfun: function(val) {
+            alert(val)
+        }
+    })
+</script>
+
+</html>

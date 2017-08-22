@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>其他设置</title>
+	<link rel="stylesheet" href="qitashezhi.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="qitashezhi.js"></script>
+	<script src="../../js/YiYunWuLian_Url.js"></script>
+	<style>
+		*{padding:0;margin:0;}
+		body{font-family: 微软雅黑;font-size: 14px;}
+		#shouye{width:200px;height:30px;font-size: 14px;text-align: center;}
+		#btn{width:100px;height:30px;border:0;background:rgb(1,93,178);color:#fff;}
+		#moren{margin-top:20px;margin-left:20px;}
+	</style>
+</head>
+<body>
+	<div id="moren">
+		默认首页：<select name="shouye" id="shouye">
+			<option value="0">数据监控</option>
+			<option value="1">场景地图</option>
+			<option value="2">地理信息</option>
+			<option value="3">视频监控</option>
+		</select>
+		<input type="button" value="确定" onclick="quren()" id="btn">
+	</div>
+	<script>
+		$(function(){
+			var homepage=localStorage.getItem("homepage");
+			if(homepage=="ssjk2"){
+				$("#shouye").val("0");
+			}else if(homepage=="ssjk2_"){
+				$("#shouye").val("1");
+			}else if(homepage=="ssjk6_"){
+				$("#shouye").val("2");
+			}else if(homepage=="ssjk7"){
+				$("#shouye").val("3");
+			}
+		})
+		$("#shouye").change(function(){
+			var shouyeoptions=$("#shouye option:selected");
+			var showyeVal=shouyeoptions.val();//部门ID
+			if(showyeVal=="0"){
+				localStorage.setItem("homepage", "ssjk2");
+			}else if(showyeVal=="1"){
+				localStorage.setItem("homepage", "ssjk2_");
+			}else if(showyeVal=="2"){
+				localStorage.setItem("homepage", "ssjk6_");
+			}else if(showyeVal=="3"){
+				localStorage.setItem("homepage", "ssjk7");
+			}
+		})
+		function quren(){
+			window.location.href=window.location.href;
+			alert("默认首页修改成功！"); 
+		}
+	</script>
+</body>
+</html>

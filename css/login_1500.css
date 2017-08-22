@@ -1,0 +1,150 @@
+*{
+    margin:0 ;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+ul li{
+    list-style-type:none;
+}
+.header{/*头部*/
+    width: 100%;
+    height: 80px;
+    background: white;
+}
+.logo_img{
+    float: left;
+    margin: 14px 20px 0 410px;
+}
+.logo_text{
+    float: left;
+    margin-top: 44px;
+}
+.content{/*身体*/
+    height: 580px;
+    width: 100%;
+    background: rgb(12,102,178);
+}
+.con_left{/*大logo*/
+    float: left;
+    margin: 49px 0 0 410px;
+    width: 703px;
+    height: 471px;
+    background: url("../imges/big_logo.png") no-repeat;
+    background-size: 703px 471px;
+}
+.con_right{/*表单*/
+    float: left;
+    width: 350px;
+    height: 390px;
+    background: white;
+    margin: 50px 0 0 50px;
+}
+.form{
+    width: 270px;
+    height: 340px;
+    margin: 23px 0 0 40px;
+}
+#userName{
+    width: 228px;
+    height: 40px;
+    padding-left: 40px;
+}
+#passWord{
+    width: 228px;
+    height: 40px;
+    padding-left: 40px;
+}
+.denglu{
+    background: url("../imges/denglu.png") no-repeat;
+    width: 68px;
+    height: 17px;
+    background-size: 68px 17px;
+    margin-bottom: 20px;
+}
+.user{
+    background: url("../imges/user.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 17px 20px;
+    position: relative;
+    top: -30px;
+    left: 10px;
+}
+.pwd{
+    background: url("../imges/password.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 17px 20px;
+    position: relative;
+    top: -30px;
+    left: 10px;
+}
+.nocode {  
+	display: inline-block;
+    width: 130px;  
+    height: 40px;  
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+}  
+.code {  
+	display: inline-block;
+    color: #ff0000;  
+    font-family: Tahoma, Geneva, sans-serif;  
+    font-style: italic;  
+    font-weight: bold;  
+    text-align: center;  
+    font-size: 30px;
+    width: 128px;  
+    height: 38px;  
+    line-height: 25px;
+    cursor: pointer;  
+    border:1px solid #e2b4a2;
+    background: #e2b4a2;
+    margin-right: 6px;
+} 
+.input {  
+  display: inline-block;
+    width: 130px;  
+    height: 40px;  
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+.yzm{
+    background: url("../imges/shuaxin.png") no-repeat;
+    width: 22px;
+    height: 20px;
+    background-size: 22px 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.loginButton{
+    width:270px; 
+    height:40px;
+    line-height:40px;
+    border:0;
+    background-color:rgb(13,114,200); 
+    letter-spacing:3px; 
+    color:#ffffff; 
+    font-size:18px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.yanzhngma{
+    width: 270px;
+}
+
+.footer{width:1366px; height:170px; margin:0 auto; position:relative;margin-left: 410px;}
+.foot{float:left;}
+.us{width:170px; float:left;}
+.gz{width:170px; float:left; margin-left:65px;}
+.top{height:45px; }
+.top span{height:45px; line-height:45px; font-size:14px;}
+.bottom{height:120px;width: 200px;}
+.bottom span{height:30px; line-height:35px;}
+.bottom img{margin-top:12px;}
+.foots{position:relative; width:100%; background-color:#f5f5f5; height:55px; bottom:0px; margin-top: 10px;}
+.foots_span{width:945px; margin:0 auto;}
+.foots_span span{width:945px; text-align:center; height:55px; line-height:55px; float:left; font-size:13px;}

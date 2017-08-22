@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="js/pagination_zh/lib/pagination.css" rel="stylesheet" />
+    <link href="js/laydate-master/need/laydate.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script src="js/pagination_zh/lib/jquery.pagination.js"></script>
+    <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="css/bootstrap-select/js/SelectExtend.js"></script>
+    <!--<script src="js/laydate.dev.js"></script>-->
+    <script src="js/json2.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/cathyJs.js"></script>
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript" src="js/sideBar.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <script src="./js/YiYunWuLian_Url.js"></script>
+    <title>易云物联网平台V1.0</title>
+</head>
+
+<body>
+    <div class="zhezhao"></div>
+    <div id="head">
+        <div id="topLogo">
+            <!--头部左侧logobegin-->
+            <img alt="" src="./imges/heaa_img.png" />
+            <!-- <span>易云</span> -->
+        </div>
+        <!--头部左侧logoend-->
+        <div id="topNav">
+            <ul class="titleText" style="background:#f5f5f5">
+                <a href="./xiangmu/zonglan/zonglan.html" target="iframeMain">
+                    <img src="./imges/icon1s.png" id="icon1" />
+                    <li style="color:#0c66b2">项目</li>
+                </a>
+            </ul>
+            <ul class="titleText">
+                <a href="./user/guanli/guanli.html" target="iframeMain">
+                    <img src="./imges/icon2.png" id="icon2" />
+                    <li style="color:#fff">用户</li>
+                </a>
+            </ul>
+            <ul class="titleText">
+                <a href="./yingjian/shebei/shebei.html" target="iframeMain">
+                    <img src="./imges/icon3.png" id="icon3" />
+                    <li style="color:#fff">硬件</li>
+                </a>
+            </ul>
+            <ul class="titleText">
+                <a href="./setting/pwadxiugai/pwadxiugai.html" target="iframeMain">
+                    <img src="./imges/icon4.png" id="icon4" />
+                    <li style="color:#fff">设置</li>
+                </a>
+            </ul>
+        </div>
+
+        <div id="topRightjia" title="退出登录">
+            <img src="./imges/off.png" alt="" title="退出登录" class="offimg">
+        </div>
+    </div>
+    <!--头部右侧功能设置块end-->
+
+    <div id="sideBar">
+        <!--侧栏部分begin-->
+        <ul id="sideBar-industrySystem">
+            <a href="./xiangmu/zonglan/zonglan.html" target="iframeMain">
+                <li style="background:#ccc">项目总览</li>
+            </a>
+            <a href="./xiangmu/guanli/guanli.html" target="iframeMain">
+                <li>项目管理</li>
+            </a>
+        </ul>
+        <ul id="sideBar-UIComponent">
+            <a href="./user/guanli/guanli.html" target="iframeMain">
+                <li style="background:#ccc">用户管理</li>
+            </a>
+            <a href="./user/rizhi/rizhi.html" target="iframeMain">
+                <li>操作日志</li>
+            </a>
+        </ul>
+        <ul id="sideBar-logicComponent">
+            <a href="./yingjian/shebei/shebei.html" target="iframeMain">
+                <li style="background:#ccc">设备类型</li>
+            </a>
+            <a href="./yingjian/xinhao/xinghao.html" target="iframeMain">
+                <li>信号类型</li>
+            </a>
+            <a href="./yingjian/zaixian/zaixian.html" target="iframeMain">
+                <li>在线设备</li>
+            </a>
+        </ul>
+        <ul id="sideBar-functionalModule">
+            <a href="./setting/pwadxiugai/pwadxiugai.html" target="iframeMain">
+                <li style="background:#ccc">密码修改</li>
+            </a>
+            <a href="./setting/shezhicanshu/shezhicanshu.html" target="iframeMain">
+                <li>设置参数</li>
+            </a>
+            <a href="./setting/wenduxiuzheng/wenduxiuzheng.html" target="iframeMain">
+                <li>温度修正</li>
+            </a>
+        </ul>
+        <ul id="sideBar-hardwareDrive">
+            <a href="hardwareDrive.html" target="iframeMain">
+                <li style="background:#ccc">系统硬件</li>
+            </a>
+            <a href="hardwareDriveManagement.html" target="iframeMain">
+                <li>硬件管理</li>
+            </a>
+        </ul>
+
+    </div>
+    <!--侧栏部分end-->
+
+    <div id="cela"><img id="cela_img" src="./imges/xiaoh.jpg" onclick="ceNav()" /></div>
+    <div id="celas"><img id="cela_imgs" src="imges/dahs.jpg" onclick="ceNav()" /></div>
+
+    <div id="main">
+        <iframe id="iframeMain" name="iframeMain" frameborder="0" src="./xiangmu/zonglan/zonglan.html"></iframe>
+    </div>
+    <!--主体部分end-->
+    <div id="picView" style="height:100%;width:100%;background:rgba(0,0,0,0.6);position:absolute;top:0;left:0;z-index:910;display:none;text-align:center;padding-top:100px;">
+        <span id="up" style="height:40px;width:40px; background:rgba(0,0,0,0.35);border-radius:20px;text-align:center;line-height:40px;color:#fff; display:inline-block;cursor:pointer;margin-right:50px;"><</span>
+        <div style="display:inline-block;">
+            <img id="templateimage" style="width:1000px;height:565px;" src="" />
+            <p id="remark" style="position:absolute;color:#fff;font-size:16px;width:1000px;text-align:left;"></p>
+        </div>
+        <span id="down" style="height:40px;width:40px;background:rgba(0,0,0,0.35);border-radius:20px;text-align:center;line-height:40px; color:#fff; display:inline-block;cursor:pointer;margin-left:50px;">></span>
+
+        <b id="closeView" style="position:absolute;top:20px;right:30px;color:#fff;cursor:pointer;font-size:25px;">X</b>
+    </div>
+    <script type="text/javascript">
+        $("#topRightjia").click(function() {
+            window.open("./login.html", "_self");
+            localStorage.clear();
+        })
+        $(".offimg").click(function() {
+                window.open("./login.html", "_self");
+                localStorage.clear();
+            })
+            //关闭alert  刷新父页面数据
+        function alertClose() {
+            $('#myAlertNoMask').modal('hide');
+            window.frames["iframeMain"].RefreshData();
+            closeBootDialog();
+        };
+        var num = 0;
+        var count = 0;
+        var SummaryList;
+        $(function() {
+            $("#closeView").click(function() {
+                $(this).parent("#picView").css("display", "none");
+            });
+            $("#up").click(function() {
+                if (num <= 0) {
+                    num = 0;
+                    $("#templateimage").attr("src", SummaryList[num].imae);
+                    $("#remark").html(SummaryList[num].remark);
+                    return;
+                }
+                num = num - 1;
+                $("#templateimage").attr("src", SummaryList[num].imae);
+                $("#remark").html(SummaryList[num].remark);
+            });
+            $("#down").click(function() {
+                if (num >= count - 1) {
+                    num = count - 1;
+                    $("#templateimage").attr("src", SummaryList[num].imae);
+                    $("#remark").html(SummaryList[num].remark);
+                    return;
+                }
+                num = num + 1;
+                $("#templateimage").attr("src", SummaryList[num].imae);
+                $("#remark").html(SummaryList[num].remark);
+            });
+        });
+
+        function picView(id) {
+            num = 0;
+            count = 0;
+            SummaryList = "";
+            $.ajax({
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                url: getApiHost() + "/api/PlatModSummary/ModSummaryList",
+                data: {
+                    ID: id
+                },
+                dataType: "json",
+                success: function(result) {
+                    if (result == "") {
+                        alert("没有预览页");
+                        $("#templateimage").attr("src", "");
+                        $("#remark").html("");
+                        return;
+                    }
+                    SummaryList = JSON.parse(result);
+                    count = SummaryList.length;
+                    $("#templateimage").attr("src", SummaryList[num].imae);
+                    $("#remark").html(SummaryList[num].remark);
+                    $("#picView").css("display", "block");
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {}
+            });
+        };
+        // $("#topLogo").click(function() {
+        //     zhezhao()
+        // })
+    </script>
+</body>
+
+</html>

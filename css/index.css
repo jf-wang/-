@@ -1,0 +1,621 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    /* Microsoft YaHei,
+    tahoma,
+    arial,
+    sans-serif; */
+    border: none;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+#head {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-color: #0c66b2;
+}
+
+#topLogo {
+    height: 100px;
+    width: 15%;
+    float: left;
+    text-align: center;
+}
+
+#topLogo img {
+    width: 176px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#topLogo span {
+    height: 105px;
+    line-height: 105px;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#topNav {
+    height: 100px;
+    width: 65%;
+    float: left;
+    padding-top: 4px;
+}
+
+#topNav .titleText {
+    height: 96px;
+    width: 180px;
+    float: left;
+}
+
+#topNav .titleText a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+#topNav ul {
+    text-align: center;
+    width: 130px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#topNav ul li {
+    font-size: 12px;
+}
+
+#topNav ul a {
+    text-decoration: none;
+}
+
+#icon1 {
+    margin: 18px auto 10px auto;
+}
+
+#icon2 {
+    margin: 18px auto 10px auto;
+}
+
+#icon3 {
+    margin: 18px auto 10px auto;
+}
+
+#icon4 {
+    margin: 18px auto 10px auto;
+}
+
+#icon5 {
+    margin: 18px auto 10px auto;
+}
+
+#icon6 {
+    margin: 18px auto 10px auto;
+}
+
+#topRightjia {
+    height: 100px;
+    width: 5%;
+    float: right;
+    background: url("../imges/off_back.png");
+    cursor: pointer;
+}
+
+#topRightjia img {
+    margin: 40px 0 0 35px;
+    cursor: pointer;
+}
+
+#topRightSet {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 235px;
+    top: 18px;
+}
+
+#topRightSet .alarm {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 46px;
+    cursor: pointer;
+}
+
+
+/* .head_off {
+    width: 80px;
+    height: 80px;
+    background: url("../imges/off_back.png") no-repeat;
+    float: right;
+    cursor: pointer;
+} */
+
+#topRightSet .alarm .alarmIcon {
+    background: url(../image/zhongs.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
+#topRightSet .alarm .alarmNumber {
+    width: 21px;
+    height: 21px;
+    background: #f00;
+    border-radius: 15px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    color: #fff;
+    line-height: 21px;
+    text-align: center;
+}
+
+#topRightSet .userSet {
+    background: url(../image/xiala.png) no-repeat -54px 0;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 60px;
+    top: 17px;
+    cursor: pointer;
+}
+
+#userDownBox {
+    width: 220px;
+    height: 70px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: #fff;
+}
+
+#userDownBox.chooseOn {
+    color: #0c66b2;
+}
+
+#userDownBox.chooseOff {
+    background: #fff;
+}
+
+#userDownBox .userPhoto {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#userDownBox .userPhoto img {
+    width: 37px;
+    height: 37px;
+}
+
+#userDownBox .userName {
+    width: 88px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    background: rgb(1, 164, 288)
+}
+
+#userDownBox .userName .userNameJob {
+    width: 110px;
+    height: 26px;
+    display: block;
+    float: left;
+    font-size: 12px;
+    background: url("../image/shezhi.png") no-repeat;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#userDownBox .userName .userNameArrow {
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: right;
+    margin-top: 7px;
+}
+
+#userOption {
+    width: 150px;
+    height: 170px;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    z-index: 10;
+    margin-top: 10px;
+    margin-left: -30px;
+    display: inline-block
+}
+
+#userOption ul {
+    margin: 0;
+    padding: 0;
+    background: rgb(25, 179, 234) !important
+}
+
+#userOption ul li {
+    line-height: 25px;
+    cursor: pointer;
+    color: #000;
+    list-style: none;
+}
+
+#userOption ul a {
+    width: 150px;
+    height: 25px;
+    display: block;
+    text-decoration: none;
+}
+
+#userOption ul a span {
+    color: white;
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+}
+
+#userOption ul li:hover,
+#userOption ul a:hover {
+    background: rgb(16, 134, 176);
+}
+
+#sideBar {
+    background: #eee;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    border-right: 1px solid #888;
+    width: 15%;
+    height: 100%;
+    display: block;
+}
+
+#sideBar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sideBar ul li {
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #888;
+    font-size: 14px;
+    height: 50px;
+}
+
+#sideBar ul a {
+    list-style: none;
+    text-decoration: none;
+}
+
+#sideBar #sideBar-userCenter {
+    display: none;
+}
+
+#sideBar #sideBar-userSet {
+    display: none;
+}
+
+#sideBar #sideBar-UIComponent {
+    display: none;
+}
+
+#sideBar #sideBar-logicComponent {
+    display: none;
+}
+
+#sideBar #sideBar-functionalModule {
+    display: none;
+}
+
+#sideBar #sideBar-hardwareDrive {
+    display: none;
+}
+
+#sideBar #sideBar-applicationMarket {
+    display: none;
+}
+
+#main {
+    position: absolute;
+    top: 100px;
+    z-index: 4;
+    background: #f5f5f5;
+    width: 84.2%;
+    left: 15.8%;
+}
+
+#iframeMain {
+    height: 100%;
+    width: 100%;
+}
+
+#cela {
+    width: 0.8%;
+    top: 100px;
+    position: absolute;
+    left: 15%;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+#celas {
+    width: 0.8%;
+    top: 70px;
+    position: absolute;
+    left: 0;
+    background-color: #f5f5f5;
+    display: none;
+}
+
+#cela img {
+    width: 100%;
+    margin-top: 300px;
+}
+
+#celas img {
+    width: 100%;
+    margin-top: 300px;
+}
+
+@media only screen and (min-width:1500px) {
+    #head {
+        height: 100px;
+    }
+    #topLogo {
+        height: 100px;
+        width: 10.5%;
+    }
+    #topLogo img {
+        width: 176px;
+        height: 60px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    #topLogo span {
+        font-size: 18px;
+        letter-spacing: 5px;
+        height: 145px;
+        line-height: 145px;
+    }
+    #topNav {
+        height: 100px;
+    }
+    #topNav .titleText {
+        height: 96px;
+        width: 180px;
+    }
+    #topRightjia {
+        height: 100px;
+    }
+    #userDownBox {
+        width: 220px;
+        height: 100px;
+    }
+    #sideBar {
+        top: 100px;
+        width: 10.5%;
+    }
+    #main {
+        top: 100px;
+        width: 88.7%;
+        left: 11.3%;
+    }
+    #cela {
+        top: 100px;
+        left: 10.5%;
+    }
+    #celas {
+        top: 100px;
+    }
+    #icon1 {
+        width: 26px;
+        height: 26px;
+        margin: 18px auto 10px auto;
+    }
+    #icon2 {
+        width: 24px;
+        height: 26px;
+        margin: 18px auto 10px auto;
+    }
+    #icon3 {
+        width: 26px;
+        height: 26px;
+        margin: 18px auto 10px auto;
+    }
+    #icon4 {
+        width: 26px;
+        height: 26px;
+        margin: 18px auto 10px auto;
+    }
+    #icon5 {
+        width: 30px;
+        height: 30px;
+        margin: 18px auto 10px auto;
+    }
+    #icon6 {
+        width: 30px;
+        height: 30px;
+        margin: 18px auto 10px auto;
+    }
+    #topNav ul li {
+        font-size: 14px;
+    }
+    #topRightSet .alarm .alarmIcon {
+        background: url(../image/zhong.png) no-repeat;
+        width: 27px;
+        height: 27px;
+    }
+    #topRightSet {
+        right: 255px;
+        top: 30px;
+    }
+    #userDownBox .userPhoto {
+        width: 52px;
+        height: 52px;
+        position: absolute;
+        left: 10px;
+        top: 28px;
+    }
+    #userDownBox .userPhoto img {
+        width: 52px;
+        height: 52px;
+    }
+    #userDownBox .userName {
+        width: 100px;
+        height: 100px;
+        right: 20px;
+    }
+    #userDownBox .userName .userNameJob {
+        width: 110px;
+        line-height: 26px;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    #userOption {
+        top: 100px;
+    }
+}
+
+.headerright {
+    width: 80px;
+    height: 100px;
+    background: url("image/shezhibkimg.png");
+    float: right;
+    margin-right: 20px;
+    z-index: 10;
+}
+
+.shezhi {
+    width: 26px;
+    height: 26px;
+    background: url("image/shezhi.png");
+    margin: 37px 27px;
+    cursor: pointer;
+}
+
+.img1 {
+    height: 100%;
+    float: right;
+    display: inline-block;
+    width: 80px;
+    background-color: rgb(1, 164, 228);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.img1 img {
+    margin: 36px 27px;
+}
+
+.headerul {
+    position: absolute;
+    top: 109%;
+    background: rgb(24, 179, 234);
+    width: 150px;
+    right: 20px;
+    /*display: none;*/
+    z-index: 10;
+    display: none;
+}
+
+.headerul li {
+    display: inline-block;
+    width: 150px;
+    line-height: 23px;
+    text-align: center;
+    /*background: red;*/
+    position: relative;
+    left: -40px;
+}
+
+.headerul li:hover {
+    background: rgb(16, 134, 176);
+    cursor: pointer;
+}
+
+.hea {
+    position: absolute;
+    top: 103%;
+    right: 10%;
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px;
+    border-style: solid;
+    border-color: transparent transparent rgb(24, 179, 234);
+    /*透明 透明  灰*/
+    z-index: 10;
+    display: none;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*.titleText img{
+    width: 26px !important;
+    height: 26px !important; 
+}*/
+
+.sanjiao {
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(24, 179, 234);
+    /*透明 透明  灰*/
+    margin: 40px auto;
+    position: relative;
+    top: -2px;
+    left: 120px;
+    z-index: 0;
+}
+
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    opacity: 0.5;
+    /*兼容IE8及以下版本浏览器*/
+    /* filter: alpha(opacity=30); */
+    display: none;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1500px) {
+    #topRightjia img {
+        margin: 25px 0 0 25px;
+        cursor: pointer;
+    }
+}

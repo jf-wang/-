@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!--<link rel="stylesheet" href="../../css/jquery.searchableSelect.css">-->
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <!--<script src="../../js/jquery.searchableSelect.js"></script>-->
+    <link rel="stylesheet" href="./guanli_1500.css">
+    <link rel="stylesheet" href="./guanli_900.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head_left">
+            <span>当前用户数</span>
+            <span class="maohao">:</span>
+            <span class="number"></span>
+            <span class="head_btn" data-toggle="modal" data-target="#myModal_xinjianuser">新增用户</span>
+        </div>
+        <div class="head_right">
+            <span class="xiangmushaixuan">项目筛选</span><span class="maohao">:</span>
+            <div class="form-group" style="float:right;">
+                <select class="xiangmushuaxuan">
+                <option value="">全部 </option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <table class="table1" border="0">
+            <thead>
+                <th>登录名</th>
+                <th>姓名</th>
+                <th>联系电话</th>
+                <th>备注</th>
+                <th>权限</th>
+                <th>默认项目</th>
+                <!--<th ></thead>-->
+                <th colspan="2">多账户用户</th>
+                <th>操作</th>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <!----------------------------------------------------------------------新增用户-->
+    <div class="modal fade" id="myModal_xinjianuser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">项目详细信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:27px">登录名</span><span class="maohao">:</span>
+                            <input type="text" class="qiye_code">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">姓名</span><span class="maohao">:</span>
+                            <input type="text" class="qiye_name">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">用户密码</span><span class="maohao">:</span>
+                            <input type="text" class="user_pasd_xiangmu">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">联系电话</span><span class="maohao">:</span>
+                            <input type="number" class="phone_xiangmu">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">权限</span><span class="maohao">:</span>
+                            <select name="" class="quanxian_xiangmu">
+                                <option value="3">监控</option>
+                                <option value="2">维护</option>
+                                <option value="1">管理</option>
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">备注</span><span class="maohao">:</span>
+                            <input type="text" class="haoma_bianji">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia_xinzeng" data-dismiss="modal">添加</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------选择项目-->
+    <div class="modal fade" id="myModal_xuanzexiangmu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;"></h4>
+                </div>
+                <div class="modal-body" style="margin: 0 10px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:28px">用户名称</span><span class="maohao">:</span>
+                            <input type="text" class="user_pasd">
+                        </div>
+                        <div class="flex-item">
+                            <span style="float:left">选择管理项目</span><span class="maohao" style="float:left;margin-right:10px;">:</span>
+                            <ul id="before" style="float:left">
+
+                            </ul>
+                            <ul id="btnUl" style="float:left">
+                                <li><input type="button" value=">>" id="right" style="margin:0 3px 0 5px"></li>
+                                <li><input type="button" value="<<" id="left" style="margin:0 3px 0 5px"></li>
+                                <!--<li><input type="button" value=">>" id="allRight"></li>
+                        <li><input type="button" value="<<" id="allLeft"></li>-->
+                            </ul>
+                            <ul id="after" style="float:left">
+
+                            </ul>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:28px">默认项目</span><span class="maohao">:</span>
+                            <select name="" class="quanxian">
+                               
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="xuanzexiangmu_true" data-dismiss="modal">确定</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------编辑-->
+    <div class="modal fade" id="myModal_bianji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">用户信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:28px">登录名</span><span class="maohao">:</span>
+                            <input type="text" class="user_pasd_yonghuxinxi">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">姓名</span><span class="maohao">:</span>
+                            <input type="text" class="yonghu_name">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">联系电话</span><span class="maohao">:</span>
+                            <input type="number" class="phone_yonghu">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">权限</span><span class="maohao">:</span>
+                            <select name="" class="quanxian_yonghuxinxi">
+                                <option value="3">监控</option>
+                                <option value="2">维护</option>
+                                <option value="1">管理</option>
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:42px">备注</span><span class="maohao">:</span>
+                            <input type="text" class="beizhu_bianji">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia_bianji" data-dismiss="modal">保存</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------删除  -->
+    <div class="modal fade" id="myModal_del" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:485px;height:560px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;"></h4>
+                </div>
+                <div class="modal-body" style="margin: 0 30px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <h4 style="margin-left:155px">是否确认删除</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="queding_del" data-dismiss="modal">确定</span>
+                    <span class="quxiao_del" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------重置密码  -->
+    <div class="modal fade" id="myModal_passwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">重置密码</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:28px">原密码</span><span class="maohao">:</span>
+                            <input type="text" class="passwork_first">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:28px">新密码</span><span class="maohao">:</span>
+                            <input type="text" class="passwork_second">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:14px">确认密码</span><span class="maohao">:</span>
+                            <input type="text" class="passwork_third">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="passwork_true" data-dismiss="modal">确定</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<!-- <script src="../../js/fenye.js"></script> -->
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+<script src="./guanli.js"></script>
+<script src="./gunali_ok.js"></script>
+<script>
+     $(".head_btn").click(function() {
+         window.parent.zhezhao();
+    });
+     $(".quxiao_bianji,.passwork_true,.queding_del,.quxiao_del,.tainjia_bianji,.quxiao_bianji,.xuanzexiangmu_true,.quxiao_bianji,.quxiao_bianji,.tainjia_xinzeng").click(function() {
+         window.parent.QXzhezhao();
+     });
+</script>
+
+</html>

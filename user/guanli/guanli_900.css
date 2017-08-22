@@ -1,0 +1,67 @@
+@media only screen and (min-width: 970px) and (max-width: 1500px) {
+.table1 th:nth-child(1),
+.table1 td:nth-child(1){
+    border-left: 1px solid rgb(198,198,198);
+    width: 100px;
+}
+.table1 th:nth-child(2),
+.table1 td:nth-child(2){
+   width: 100px;
+}
+.table1 th:nth-child(3),
+.table1 td:nth-child(3){
+   width: 70px;
+}
+.table1 th:nth-child(4),
+.table1 td:nth-child(4){
+    width:120px;
+}
+.table1 th:nth-child(5),
+.table1 td:nth-child(5){
+    width:70px;
+}
+.table1 th:nth-child(6),
+.table1 td:nth-child(6){
+    width:200px;
+}
+.table1 th:nth-child(7){
+    width: 160px;
+}
+.table1 td:nth-child(7){
+    width:60px;
+}
+.table1 td:nth-child(8){
+    width:90px;
+}
+.table1 th:nth-child(8){
+    width:290px;
+}
+.table1 td:nth-child(9){
+    width:290px;
+}
+.modal-dialog{
+    width:620px;height:380px;
+}
+#before,#after{
+    width:200px;
+    height:300px;
+    border:1px solid #ccc;
+    overflow: scroll;
+}
+#btnUl{
+    margin-left: 0;
+    padding:0;
+    margin-top: 280px;
+}
+.user_pasd{
+    width: 200px !important;
+}
+.quanxian{
+    width: 200px;
+}
+.quanxian_yonghuxinxi,.quanxian_xiangmu{
+    width: 300px;
+    height: 28px;
+}
+
+}

@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>信号类型</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="./shebei_1500.css">
+    <link rel="stylesheet" href="./shebei_900.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head_left">
+            <span>设备类型</span>
+            <span class="maohao">:</span>
+            <span class="number"></span>
+            <span class="head_btn" data-toggle="modal" data-target="#myModal_xinzengshebei">新增设备类型</span>
+        </div>
+    </div>
+    <div class="content">
+        <table class="table1" border="0">
+            <thead>
+                <th>编号</th>
+                <th>设备类型名称</th>
+                <th>系数</th>
+                <th>项目</th>
+                <th>备注</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>
+                    <span class="bianji" data-toggle="modal" data-target="#myModal_shebeibianji">编辑</span>
+                </td>
+            </tr> -->
+        </table>
+    </div>
+    <!----------------------------------------------------------------------新增设备类型-->
+    <div class="modal fade" id="myModal_xinzengshebei" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">设备类型信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:56px">编号</span><span class="maohao">:</span>
+                            <input type="text" class="xinjian_bianhao">
+                        </div>
+                        <div class="flex-item">
+                            <span>设备类型名称</span><span class="maohao">:</span>
+                            <input type="text" class="xinjian_name">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">系数</span><span class="maohao">:</span>
+                            <input type="text" class="xinjian_addr">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">项目</span><span class="maohao">:</span>
+                            <select name="" class="xinjian_xmname">
+                                 <option value="#" selected="selected">请选择</option>
+                                <!-- <option value="#1">智慧农业</option>
+                                <option value="#2">设备#2</option>
+                                <option value="#3">设备#3</option>
+                                <option value="#4">设备#4</option> -->
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px" class="beizhu_shebei">备注</span><span class="maohao">:</span>
+                            <input type="text" class="xinjian_bz">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia" data-dismiss="modal">添加</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------------------------编辑-->
+    <div class="modal fade" id="myModal_shebeibianji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document" style="width:480px;height:330px;">
+            <div class="modal-content myModal">
+                <div class="modal-header" style="border:0">
+                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;">设备类型信息</h4>
+                </div>
+                <div class="modal-body" style="margin: 0 44px 0 30px;    padding: 0px;">
+                    <div style="display:flex; flex-direction:column;">
+                        <div class="flex-item">
+                            <span style="margin-left:56px">编号</span><span class="maohao">:</span>
+                            <input type="text" class="shebei_bianhao">
+                        </div>
+                        <div class="flex-item">
+                            <span>设备类型名称</span><span class="maohao">:</span>
+                            <input type="text" class="shebei_name">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">系数</span><span class="maohao">:</span>
+                            <input type="text" class="shebei_addr">
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px">项目</span><span class="maohao">:</span>
+                            <select name="" class="shebei_xmname">
+                                <option value="#" selected="selected">请选择</option>
+                                
+                            </select>
+                        </div>
+                        <div class="flex-item">
+                            <span style="margin-left:56px" class="beizhu_shebei">备注</span><span class="maohao">:</span>
+                            <input type="text" class="shebei_bz">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border:0">
+                    <span class="tainjia_bianji" data-dismiss="modal">保存</span>
+                    <span class="quxiao_bianji" data-dismiss="modal">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/YiYunWuLian_Url.js"></script>
+<script src="../../js/fenye.js"></script>
+<script src="./shebei.js"></script>
+<script>
+    $(".head_btn").click(function() {
+        window.parent.zhezhao();
+    });
+    $(".tainjia_bianji,.quxiao_bianji,.tainjia,.quxiao_bianji").click(function() {
+        window.parent.QXzhezhao();
+    });
+</script>
+
+</html>

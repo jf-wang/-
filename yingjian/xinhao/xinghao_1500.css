@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+body {
+    margin: 30px 0px 0 5px;
+    padding: 0;
+    background: rgb(245, 245, 245);
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+}
+
+.head_left {
+    float: left;
+}
+
+.head_right {
+    float: left;
+    margin-left: 20px;
+}
+
+.head_btn {
+    background: rgb(1, 93, 178);
+    color: white;
+    width: 120px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.table1 th {
+    background: rgb(204, 204, 204);
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    border-right: 1px solid rgb(170, 170, 170);
+    border-top: 1px solid rgb(170, 170, 170);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.table1 td {
+    text-align: center;
+    border-right: 1px solid rgb(170, 170, 170);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    height: 40px;
+}
+
+.table1 th:nth-child(1),
+.table1 td:nth-child(1) {
+    border-left: 1px solid rgb(170, 170, 170);
+    width: 200px;
+}
+
+.table1 th:nth-child(2),
+.table1 td:nth-child(2) {
+    width: 200px;
+}
+
+.table1 th:nth-child(3),
+.table1 td:nth-child(3) {
+    width: 200px;
+}
+
+.table1 th:nth-child(4),
+.table1 td:nth-child(4) {
+    width: 120px;
+}
+
+.table1 th:nth-child(5),
+.table1 td:nth-child(5) {
+    width: 240px;
+}
+
+.table1 th:nth-child(6),
+.table1 td:nth-child(6) {
+    width: 240px;
+}
+
+.table1 th:nth-child(7),
+.table1 td:nth-child(7) {
+    width: 240px;
+}
+
+.table1 th:nth-child(8),
+.table1 td:nth-child(8) {
+    width: 120px;
+}
+
+.table1 th:nth-child(9),
+.table1 td:nth-child(9) {
+    width: 120px;
+}
+
+.gaoji {
+    color: rgb(1, 93, 178);
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+.bianji {
+    color: rgb(1, 152, 95);
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+.del {
+    color: rgb(230, 27, 40);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.flex-item {
+    margin-bottom: 10px;
+}
+
+.xiangmushaixuan {
+    display: inline-block;
+    margin: 10px;
+    line-height: 10px;
+}
+
+.maohao {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 10px;
+}
+
+.flex-item input {
+    width: 300px;
+    height: 28px;
+}
+
+#myModal_gaoji .flex-item input {
+    width: 250px;
+    height: 28px;
+}
+
+.maohao {
+    margin: 0 5px 0 5px;
+}
+
+.xinjian,
+.tainjia,
+.tainjia_bianji,
+.tainjia_gaoji {
+    width: 60px;
+    height: 25px;
+    background: rgb(1, 93, 178);
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    position: relative;
+    left: -185px;
+    cursor: pointer;
+}
+
+.quxiao,
+.quxiao_bianji,
+.quxiao_gaoji {
+    width: 60px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid rgb(170, 170, 170);
+    line-height: 25px;
+    position: relative;
+    left: -150px;
+    cursor: pointer;
+}
+
+.shezhi_xiangmu,
+.background_shezhi,
+.background_xinhao,
+.xinhao_xiangmu {
+    width: 300px;
+    height: 30px;
+}
+
+.id {
+    display: none;
+}
+
+#pageStyle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #CCC;
+    line-height: 32px;
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#pageStyle:hover {
+    background-color: #CCC;
+}
+
+#pageStyle .active {
+    background-color: #0CF;
+    color: #ffffff;
+}
+
+.xinjian_xmname {
+    width: 300px;
+    height: 30px;
+}
+
+.rgb {
+    width: 244px !important;
+}
+
+tbody tr:hover {
+    background: rgb(245, 245, 245);
+}
+
+tbody tr {
+    background: white;
+}
